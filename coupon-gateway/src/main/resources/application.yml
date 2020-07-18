@@ -8,7 +8,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://server1:8000/eureka/
+      defaultZone: http://localhost:8000/eureka/
 
 zuul:
   prefix: /imooc
@@ -22,6 +22,3 @@ zuul:
     connect-timeout-millis: 15000
     socket-timeout-millis: 60000
 
-ribbon:
-  ConnectTimeout: 15000
-  ReadTimeout: 15000

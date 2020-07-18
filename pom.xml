@@ -44,11 +44,6 @@
                 <artifactId>lombok</artifactId>
                 <version>1.16.18</version>
             </dependency>
-            <!-- 服务网关 -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-            </dependency>
             <!-- apache 工具类 -->
             <dependency>
                 <groupId>commons-io</groupId>
@@ -64,7 +59,7 @@
     </dependencyManagement>
 
     <!-- 配置远程仓库 -->
-    <!--<repositories>
+    <repositories>
         <repository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>
@@ -73,7 +68,7 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-    </repositories>-->
+    </repositories>
 
 
 </project>
