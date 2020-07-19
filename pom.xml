@@ -32,6 +32,8 @@
         <fastjson.version>1.2.31</fastjson.version>
         <commons-lang3.version>3.0</commons-lang3.version>
         <commons-collections4.version>4.0</commons-collections4.version>
+        <commons-codec.version>1.9</commons-codec.version>
+        <mysql-connector-java.version>8.0.12</mysql-connector-java.version>
     </properties>
 
     <!-- 标识 SpringCloud 的版本 -->
@@ -77,6 +79,18 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-collections4</artifactId>
                 <version>${commons-collections4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.9</version>
+            </dependency>
+            <!-- MySQL 驱动, 注意, 这个需要与 MySQL 版本对应 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+                <scope>runtime</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
