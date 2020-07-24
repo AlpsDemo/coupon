@@ -1,7 +1,9 @@
 package org.coupon.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.coupon.constant.CouponCategory;
 import org.coupon.constant.DistributeTarget;
@@ -12,6 +14,8 @@ import org.coupon.convert.ProductLineConverter;
 import org.coupon.convert.TemplateRuleConverter;
 import org.coupon.serialization.CouponTemplateSerialize;
 import org.coupon.vo.TemplateRule;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -20,9 +24,12 @@ import java.util.Date;
 /**
  * 优惠券模板实体
  */
-@Entity
-@Table(name = "coupon_template")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@EntityListeners(AuditingEntityListener.class)
+@Table(name = "coupon_template")
 @JsonSerialize(using = CouponTemplateSerialize.class)
 public class CouponTemplate implements Serializable {
     @Id
@@ -56,6 +63,7 @@ public class CouponTemplate implements Serializable {
     private Integer count;
     /**创建时间*/
     @Column(name = "create_time")
+    @CreatedDate
     private Date createTime;
     /**创建人*/
     @Column(name = "user_id")
