@@ -1,6 +1,8 @@
 package org.coupon.vo;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.coupon.constant.ResultCodeEnum;
 
 import java.io.Serializable;
@@ -10,6 +12,7 @@ import java.io.Serializable;
  * Created by alps.
  */
 @Getter
+@AllArgsConstructor
 public class CommonResponse<T> implements Serializable {
 
     private final Integer code;

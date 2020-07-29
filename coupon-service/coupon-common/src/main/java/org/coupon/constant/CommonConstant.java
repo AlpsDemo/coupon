@@ -1,7 +1,11 @@
 package org.coupon.constant;
 
 public class CommonConstant {
+
     public static final String DATE_TIME_PATTERN = "yyyy-MM-dd HH:mm:ss";
+
+    /** Kafka 消息的 Topic */
+    public static final String TOPIC = "user_coupon_op";
     /**
      * <h2>Redis Key 前缀定义</h2>
      * */
