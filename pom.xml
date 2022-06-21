@@ -33,7 +33,7 @@
         <commons-lang3.version>3.9</commons-lang3.version>
         <commons-collections4.version>4.0</commons-collections4.version>
         <commons-codec.version>1.9</commons-codec.version>
-        <mysql-connector-java.version>8.0.12</mysql-connector-java.version>
+        <mysql-connector-java.version>8.0.28</mysql-connector-java.version>
         <spring-kafka.version>2.2.0.RELEASE</spring-kafka.version>
     </properties>
 
